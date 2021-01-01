@@ -36,22 +36,22 @@ Input UCI HAR Dataset downloaded from https://d396qusza40orc.cloudfront.net/getd
         5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
       
 
-## 1. MERGING THE TRAINING AND THE TEST SETS TO CREATE ONE DATA SET
+## 1. Merging the training and the test sets to create one data set
 The targeted text files were imported to read data from the files into the variables. Files were imported individually and applicable files were then merged into sets, first all files in the TRAINING set then all files in the TEST set. This was done prior to merging the two sets into one larger data set. The features and activity_labels files had column names assigned but were not merged and will be used later.
 
 
-## 2. EXTRACTING ONLY THE MEASUREMENTS ON THE MEAN & STANDARD DEVIATION FOR EACH MEASUREMENT
+## 2. Extracting only the measurements on the mean & standard deviation for each measurement
 Merged data was then subsetted to only keep the relevant columns. Subsetted Name of Features by measurements on the mean and standard deviation as well as the data frame Data by selected names of Features. Checked the structures of the data frame Data. 
 
 
-## 3. RENAME ACTIVITIES IN DATA SET WITH DESCRIPTIVE ACTIVITY NAMES
+## 3. Rename activities in data set with descriptive activity names
 'activity_labels.txt' was merged with the subsetted data to add descriptive activity names to merged and subsetted data set. Values in 'activity' column were then replaced with the matching values from the 'activityType' column in order to make the data easier to read.  
  
 
-## 4. APPROPRIATELY LABELS THE DATA SET WITH DESCRIPTIVE VARIABLE NAMES
+## 4. Appropriately labels the data set with descritive variable names 
 Used the 'gsub' function to clean up the column names in merged & subsetted data set. 'activityType' column removed in order to tidy data further.
 
-## 5. CREATES A SECOND, INDEPENDENT TIDY DATA SET AND OUTPUT IT
+## 5. Creates a second, independent tidy data set and output it 
 New table was created which contains average for each variable for each activity and subject.
 
 
